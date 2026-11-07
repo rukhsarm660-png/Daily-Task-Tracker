@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8ddff, #f9e8f5, #e0e7ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 520px;
+    padding: 35px;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(91, 70, 140, 0.15);
+}
+
+h1 {
+    color: #59418c;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin: 28px 0;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 2px solid #e3d9f5;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #9272c8;
+}
+
+button {
+    background: #8062b5;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #60438f;
+    transform: translateY(-2px);
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #f5f0ff;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 12px;
+    list-style: none;
+    color: #51416f;
+}
+
+li span {
+    cursor: pointer;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.delete {
+    background: #e7798e;
+    padding: 10px 13px;
+}
+
+.delete:hover {
+    background: #d65370;
+}
+
+.summary {
+    border-top: 1px solid #eee4f8;
+    margin-top: 25px;
+    padding-top: 20px;
+}
+
+.summary p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #65518a;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+.progress-section {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.progress-section h3 {
+    color: #59418c;
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e9e1f5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progressFill {
+    width: 0%;
+    height: 100%;
+    background: #8062b5;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+#progressText {
+    text-align: right;
+    margin-top: 8px;
+    font-size: 13px;
+}
