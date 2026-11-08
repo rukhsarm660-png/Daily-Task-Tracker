@@ -1,39 +1,105 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Task Tracker</title>
+
+    <title>Daily Task Tracker - Version 2.0</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
+
         <h1>My Daily Tasks</h1>
         <p>Organize your day, one task at a time!</p>
 
+        <!-- Task Input -->
         <div class="task-input">
-            <input type="text" id="taskInput"
-                   placeholder="Enter a new task">
-            <button onclick="addTask()">Add Task</button>
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task"
+            >
         </div>
 
+        <!-- Deadline Input -->
+        <div class="deadline-input">
+
+            <h3>Set Task Deadline</h3>
+
+            <div class="date-time-fields">
+
+                <div>
+                    <label for="taskDeadline">Select Date:</label>
+                    <input type="date" id="taskDeadline">
+                </div>
+
+                <div>
+                    <label for="taskTime">Select Time:</label>
+                    <input type="time" id="taskTime">
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+            <button
+                class="notify-btn"
+                onclick="enableNotifications()"
+            >
+                Enable Reminders
+            </button>
+
+        </div>
+
+        <p id="notificationStatus">
+            Enable notifications to receive reminders.
+        </p>
+
+        <!-- Task List -->
         <ul id="taskList"></ul>
-        <div class="progress-section">
-    <h3>Daily Progress</h3>
-    <div class="progress-bar">
-        <div id="progressFill"></div>
-    </div>
-    <p id="progressText">0% Completed</p>
-</div>
 
-        <div class="summary">
-            <p>Total Tasks: <span id="total">0</span></p>
-            <p>Completed: <span id="completed">0</span></p>
+        <!-- Progress Section -->
+        <div class="progress-section">
+
+            <h3>Daily Progress</h3>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <p id="progressText">0% Completed</p>
+
         </div>
+
+        <!-- Summary -->
+        <div class="summary">
+
+            <p>
+                Total Tasks:
+                <span id="total">0</span>
+            </p>
+
+            <p>
+                Completed:
+                <span id="completed">0</span>
+            </p>
+
+        </div>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
